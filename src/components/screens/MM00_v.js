@@ -1,41 +1,58 @@
 import React from "react";
-import Flip from "react-reveal/Flip";
-import Bounce from "react-reveal/Bounce";
+import Slide from "react-reveal/Slide";
+import Rotate from "react-reveal/Rotate";
+import { Link } from "react-router-dom";
 
-class MM00_v extends React.Component {
+const menus = [
+  {
+    menuName: "FREE BOARD",
+    link: "/freeboard",
+  },
+  {
+    menuName: "DOCUMENTS BOARD",
+    link: "/docsboard",
+  },
+  {
+    menuName: "GALLARY",
+    link: "/gallaryboard",
+  },
+];
+
+class MM00_V extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       menus: [
         {
-          menuName: "FREEBOARD",
-          link: "",
+          menuName: "FREE BOARD",
+          link: "/freeboard",
         },
         {
           menuName: "DOCUMENTS BOARD",
-          link: "",
+          link: "/docsboard",
         },
         {
           menuName: "GALLARY",
-          link: "",
+          link: "/gallaryboard",
         },
       ],
     };
   }
   render() {
-    const { menus } = this.state;
     return (
-      <main className="MM00_v">
-        <Flip>
-          <h1 className="MM00_v__title">GJ Community</h1>
-        </Flip>
-
-        <div className="MM00_v__menuBox">
+      <main className="MM00_V">
+        <Slide top>
+          <h1 className="MM00_V__title">GJ Community</h1>
+        </Slide>
+        <div className="MM00_V__menuBox">
           {menus.map((menu, idx) => {
             return (
-              <Bounce bottom delay={idx * 250} key={idx}>
-                <div className="MM00_v__menuBox__menu">{menu.menuName}</div>
-              </Bounce>
+              <Rotate bottom left delay={idx * 500} key={idx}>
+                <Link to={menu.link}>
+                  <div className="MM00_V__menuBox__menu">{menu.menuName}</div>
+                </Link>
+              </Rotate>
             );
           })}
         </div>
@@ -44,4 +61,4 @@ class MM00_v extends React.Component {
   }
 }
 
-export default MM00_v;
+export default MM00_V;

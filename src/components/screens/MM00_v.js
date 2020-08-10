@@ -26,17 +26,21 @@ class MM00_v extends React.Component {
     const { menus } = this.state;
     return (
       <main className="MM00_v">
-        <Flip>
-          <h1 className="MM00_v__title">GJ Community</h1>
-        </Flip>
+        <header className="header">주문하려면 메뉴를 클릭해 주세요.</header>
+        <ul className="nav-bar">
+          <li className="hot">인기메뉴</li>
+          <li className="new">신메뉴</li>
+          <li className="set">세트메뉴</li>
+          <li className="dduk">떡볶이</li>
+          <li className="kim">김밥</li>
+          <li className="drink">커피&음료</li>
+          <li className="guitar">기타</li>
+        </ul>
+        <div className="reference">※쿠폰 이용시 결재 후 사용하세요.※</div>
 
         <div className="MM00_v__menuBox">
           {menus.map((menu, idx) => {
-            return (
-              <Bounce bottom delay={idx * 250} key={idx}>
-                <div className="MM00_v__menuBox__menu">{menu.menuName}</div>
-              </Bounce>
-            );
+            return <div className="MM00_v__menuBox__menu">{menu.menuName}</div>;
           })}
         </div>
       </main>

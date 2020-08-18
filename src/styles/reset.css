@@ -132,3 +132,7 @@ a {
   text-decoration: none;
   color: rgb(120, 120, 120);
 }
+
+* {
+  box-sizing: border-box;
+}

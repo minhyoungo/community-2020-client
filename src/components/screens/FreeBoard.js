@@ -1,10 +1,34 @@
 import React from "react";
-import { WholeWrapper, Wrapper, Column } from "../commonComponents";
+import {
+  WholeWrapper,
+  Wrapper,
+  Column,
+  TitleWrapper,
+  Title,
+  SearchInput,
+} from "../commonComponents";
+import SearchIcon from "@material-ui/icons/Search";
+import { Link } from "react-router-dom";
 
 class FreeBoard extends React.Component {
   render() {
     return (
       <WholeWrapper>
+        <TitleWrapper>
+          <Title>Free Board</Title>
+        </TitleWrapper>
+
+        <TitleWrapper direction={`row`}>
+          <SearchInput />
+          <SearchIcon />
+        </TitleWrapper>
+
+        <TitleWrapper width={"960px"} align={"flex-end"}>
+          <Link to={`/write/free`}>
+            <C_Btn>글쓰기</C_Btn>
+          </Link>
+        </TitleWrapper>
+
         <Wrapper width="960px" height="25px" direction="row">
           <Column width={"5%"} isHead={true}>
             번호
@@ -22,6 +46,7 @@ class FreeBoard extends React.Component {
             조회수
           </Column>
         </Wrapper>
+
         {/*---DATA AREA START---*/}
         <Wrapper width="960px" height="25px" direction="row" isData={true}>
           <Column width={"5%"} isHead={false}>

@@ -1,13 +1,25 @@
 .MM00_V {
   width: 100%;
+<<<<<<< HEAD
   height: 964px;
+=======
+  height: 100vh;
+  background-image: url(../images/bg.jpeg);
+  background-size: cover;
+}
+>>>>>>> refs/remotes/origin/master
 
+.header {
+  background-color: #ffba00;
+  color: #ffffff;
+  height: 70px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
 }
 
+<<<<<<< HEAD
 .MM00_V .MM00_V__title {
   font-size: 44px;
   margin-bottom: 10px;
@@ -17,9 +29,17 @@
 
 .MM00_V .MM00_V__menuBox {
   width: 600px;
+=======
+.nav-bar {
+  background-color: #ffffff;
+  width: 573px;
+  height: 58px;
+  font-size: 18px;
+>>>>>>> refs/remotes/origin/master
   display: flex;
-  flex-direction: column;
+
   align-items: center;
+<<<<<<< HEAD
   justify-content: center;
 }
 
@@ -38,4 +58,50 @@
   background: linear-gradient(#f2994a, #f2c94c);
   color: #fff;
   animation: appear 0.5s forwards;
+=======
+  justify-content: space-around;
+  margin-left: 36px;
+  border: #707070 1px solid;
+  border-radius: 20px;
+}
+
+.hot {
+  color: #c42626;
+  font-size: 20px;
+}
+
+.new {
+  color: #16c938;
+  font-size: 20px;
+}
+
+.set {
+  color: #c8dd2c;
+  font-size: 20px;
+}
+
+.dduk {
+  color: #0b0b0b;
+  font-size: 20px;
+}
+.kim {
+  color: #0b0b0b;
+  font-size: 20px;
+}
+.drink {
+  color: #0b0b0b;
+  font-size: 20px;
+}
+.guitar {
+  color: #0b0b0b;
+  font-size: 20px;
+}
+
+.reference {
+  color: #707070;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 220px;
+>>>>>>> refs/remotes/origin/master
 }
